@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi equipo - Blog</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Z5RD5raIVn/Ze09z+nMx6hN07zD9Id6FgLd6itL70B24CQfL+WoxE+2Qw/cxIXFzv5ZZJBJHyzYd5ll3lL8gJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="reloj"></div>
+	<div id="animation">
+		<img src="img/compuVolando.jpg" alt="Imagen voladora" style="width: 100px; height: auto;">
+</div>
+	</div>
+
+	<header>
+		<div class="logo">Equipo Desarrollo Web</div>
+		<nav>
+			<ul>
+				<li><a href="#nosotros">Nosotros</a></li>
+				<li><a href="#nuestros-proyectos">Nuestros proyectos</a></li>
+				<li><a href="#miscelaneas">Misceláneas</a></li>
+				<li><a href="contacto.html" class="contacto-link">Contáctanos</a></li>
+				<li><a href="#" onclick="toggleCalculadora()">Calculadora</a></li>
+			</ul>
+		</nav>
+		
+		<div id="calculadora-container" style="display: none;">
+			<h2>Calculadora</h2>
+			<input type="number" id="valor1" placeholder="Valor 1">
+			<input type="number" id="valor2" placeholder="Valor 2">
+			<div>
+				<button onclick="calcular(1)">Sumar</button>
+				<button onclick="calcular(2)">Restar</button>
+				<button onclick="calcular(3)">Multiplicar</button>
+				<button onclick="calcular(4)">Dividir</button>
+				<button onclick="cerrarCalculadora()">Cerrar</button>
+			</div>
+			<p id="resultado"></p>
+		</div>
+	</header>
+
+	<main>
+		<section id="nosotros">
+			<h2>Nosotros</h2>
+			<div class="grid-container">
+				<div class="grid-item rounded">
+					<img src="img/maxijujuy2.jpeg" onmouseover="cambiarImagen(this, 'img/pirata.png')" onmouseout="restaurarImagen(this, 'img/maxijujuy2.jpeg')">
+				</div>
+				<div class="grid-item rounded">
+					<img src="img/esteban.png.jpg" onmouseover="cambiarImagen(this, 'img/lengua.jpg')" onmouseout="restaurarImagen(this, 'img/esteban.png.jpg')">
+				</div>
+				<div class="grid-item rounded">
+					<img src="img/cin.jpg" onmouseover="cambiarImagen(this, 'img/sonrisa.jpg')" onmouseout="restaurarImagen(this, 'img/cin.jpg')">
+				</div>
+				<div class="grid-item rounded">
+					<img src="img/cristian.jpg" onmouseover="cambiarImagen(this, 'img/anteojos.jpg')" onmouseout="restaurarImagen(this, 'img/cristian.jpg')">
+				</div>
+			</div>
+		</section>
+		
+
+		<section id="nuestros-proyectos">
+			<h2>Nuestros proyectos</h2>
+			<div class="grid-container">
+				<div class="grid-item"><a href="#">github link - GitHub</a></div>
+				<div class="grid-item"><a href="https://github.com/estebanferrari86">github link - GitHub</a></div>
+				<div class="grid-item"><a href="#">github link - GitHub</a></div>
+				<div class="grid-item"><a href="#">github link - GitHub</a></div>
+				
+			</div>
+		</section>
+
+		<section id="miscelaneas">
+            <h2>Misceláneas</h2>
+            <div class="grid-container">
+              <div class="grid-item">He trabajado como vendedor casi toda mi vida , empezando desde joven en Servicios en Informatica S.A.
+                comence como cadete y llegue a ser vendedor tecnico. 
+                He realizado trabajos como atencion al cliente (tren de la costa) , ventas , supervision y capacitacion de vendedores (FDC filtfos de agua comerciales . ) , encargado de planta en Homesystems S.A.( empresa fabricante de Hidromasajes) y actualmente soy socio en el instituto de ingles Your Own Way .
+                Estoy cursando la carrera de Tecnico superior en analisis de sistemas y trabajando a tiempo completo en Openpass donde estuve en el equipo de microservicios en BE y ahora en QA automation, en la parte de desarrollo de testeos en JavaScript.</div>
+              <div class="grid-item">Analista de Sistemas y Desarrollador de Software con experiencia tanto del lado técnico como funcional.Tengo experiencia en varios proyectos en mayor parte en el rubro de banca y financiero.
+                Actualmente me aboco a tareas de análisis,soporte y resolución de incidentes como Analista Técnico Funcional en el módulo de SAP BANKING.
+                
+                Skills
+                Cloud : AWS , OCI
+                Repositorios : Github , Docker
+                Lenguajes de programacion: Abap,Python,Java,JavaScript,node.js,SQL & Bases de datos relacionales
+                Otros conocimientos: SCRUM ,Metodologias Agiles</div>
+              <div class="grid-item">Cinthia tiene un capacidad de adaptación excepcional, acompañada por una actitud positiva y motivadora para con sus colegas. Es capaz de superar desafíos de una manera sencilla y natural del día a día. Tiene un grado de responsabilidad y compromiso total. Siempre apuesta por un constante crecimiento sumandose a propuestas que involucren capacitación o inovaciones tecnologicas. Aporta muchisimo en el ambiente de trabajo haciendo muy agradable todas las actividades en donde ella participe. 
+                Compartiendo por primera vez proyecto con ella, fue destacable que superaba en skills su rol de analista de calidad manual que desempeñaba en aquel entonces, dado que lograba llevar a cabo tareas que requerían ciertos skills de programación, por lo que no le llevo mucho tiempo hacer el salto a QA Automation con excelentes resultados. De los perfiles ideales para un equipo de calidad.</div>
+              <div class="grid-item">Mi nombre es Cristian Jelovcic, soy programador. Trabaje 10 años como jefe Comercial en una empresa multinacional de Retail. Motivado por aprender y hacer cosas nuevas decidí hacer un cambio de carrera.</div>
+            </div>
+          </section>
+	</main>
+
+	<div class="nav-lateral">
+		<ul>
+			<li><a href="#nosotros">Nosotros</a></li>
+			<li><a href="#github link">Nuestros proyectos</a></li>
+			<li><a href="#miscelaneas">Misceláneas</a></li>
+		</ul>
+	</div>
+
+	<footer>
+		<div class="social">
+		  <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+		  <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+		  <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+		</div>
+		<p>&copy; 2023 Mi equipo - Todos los derechos reservados.</p>
+	  </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
